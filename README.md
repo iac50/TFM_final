@@ -148,4 +148,5 @@ Más detalle sobre estas y otras limitaciones en el capítulo de Conclusiones de
 ## Autoría
 
 Trabajo de Fin de Máster — *Itsaso Ariztimuño Cenoz, máster en Ciencia de Datos, universidad de Alicante*
+
 Tutor/a: *Miguel Ángel Teruel*
