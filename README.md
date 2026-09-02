@@ -25,10 +25,10 @@ El trabajo se organiza en cinco fases. Cada notebook depende de los artefactos (
 
 ```mermaid
 flowchart TD
-    A[Descarga de datos<br/>tráfico, clima, accidentes, cierres,<br/>partidos, conciertos, festivos] --> B[EDA<br/>EDA_crashes, EDA_closures]
-    A --> C[holidays.ipynb<br/>calendario festivo + escolar]
-    B --> D[traffic.ipynb<br/>integración de todas las fuentes]
-    C --> D
+    A1[Descarga de datos y EDA<br/>tráfico, clima, accidentes, cierres,<br/>partidos, conciertos, festivos] 
+    A2[holidays.ipynb<br/>calendario festivo + escolar]
+    A1 --> D[traffic.ipynb<br/>integración de todas las fuentes]
+    A2 --> D
     D --> E1[modelo_lightgbm.ipynb<br/>LightGBM principal]
     D --> E2[modelo_lightgbm2.ipynb<br/>LightGBM de respaldo]
     D --> E3[modelo_gcn.ipynb<br/>GCN]
