@@ -135,7 +135,7 @@ Los notebooks se ejecutaron en VSCode y Google Colab, guardando los artefactos i
 
 ## Limitaciones conocidas
 
-- El *feed* de tráfico en tiempo real de Chicago (`current`) no se actualiza con la frecuencia que indica su documentación oficial (se comprobó una desactualización de más de 100 días en el momento de la validación).
+- El *feed* de tráfico en tiempo real de Chicago (`real time Chicago Traffic Tracker`) no se actualiza con la frecuencia que indica su documentación oficial (se comprobó una desactualización de más de 100 días en el momento de la validación).
 - La API de setlist.fm es retrospectiva (no permite saber si un concierto está ocurriendo ahora mismo); para el escenario en tiempo real se sustituyó por Ticketmaster.
 - El modelo GCN es transductivo: no generaliza a segmentos fuera del grafo de entrenamiento, por lo que sigue siendo necesario el modelo de respaldo para el resto de la red viaria.
 
