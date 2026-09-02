@@ -21,7 +21,7 @@ El sistema integra siete fuentes de datos abiertos (tráfico histórico, acciden
 
 ## Arquitectura del pipeline
 
-El trabajo se organiza en cinco fases. Cada notebook depende de los artefactos (parquet, modelos entrenados, checkpoints) generados por los anteriores, guardados en una carpeta compartida.
+El trabajo se organiza en seis fases. Cada notebook depende de los artefactos (parquet, modelos entrenados, checkpoints) generados por los anteriores, guardados en una carpeta compartida.
 
 ```mermaid
 flowchart TD
