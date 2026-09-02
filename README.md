@@ -32,7 +32,7 @@ flowchart TD
     D --> E1[modelo_lightgbm.ipynb<br/>LightGBM principal]
     D --> E2[modelo_lightgbm2.ipynb<br/>LightGBM de respaldo]
     D --> E3[modelo_gcn.ipynb<br/>GCN]
-    E1 --> F[grafo_y_prediccion.ipynb<br/>grafo vial + 4 escenarios de predicción]
+    E1 --> F[grafo_y_predicciones.ipynb<br/>grafo vial + 4 escenarios de predicción]
     E2 --> F
     E3 --> F
     F --> G1[VRP_ortools.ipynb<br/>resolución con OR-Tools]
