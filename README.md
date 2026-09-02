@@ -48,34 +48,32 @@ flowchart TD
 ```
 .
 ├── data/
-│   ├── ChicagoBears/                                              # Calendario de partidos, 2015-2026
+│   ├── ChicagoBears/    # Calendario de partidos 2015-2026 (Sports-Reference.com)
 │   ├── ChicagoBlackhawks/
 │   ├── ChicagoBulls/
 │   ├── ChicagoCubs/
 │   ├── ChicagoFire/
 │   ├── ChicagoWhiteSox/
-│   ├── Traffic_Crashes_-_Crashes_20260801.csv                     # Chicago Data Portal
+│   ├── Traffic_Crashes_-_Crashes_20260801.csv    # Chicago Data Portal
 │   ├── Transportation_Department_Permits_-_Street_Closures_20260801.csv
 │   └── vacation_days.csv
 │
-├── desc_y_EDA_concerts.ipynb        # Descarga (setlist.fm) y EDA de conciertos
-├── desc_y_EDA_matches.ipynb         # Unificación y EDA de partidos de todos los equipos
-├── descargar_traffic.py             # Descarga de tráfico histórico (Chicago Data Portal)
+├── desc_y_EDA_concerts.ipynb    # Descarga (setlist.fm) y EDA de conciertos
+├── desc_y_EDA_matches.ipynb     # Unificación y EDA de partidos de todos los equipos
+├── descargar_traffic.py         # Descarga de tráfico histórico (Chicago Data Portal)
 ├── descargar_traffic2.py
-├── descargar_weather.ipynb          # Descarga de clima histórico (Open-Meteo)
-├── EDA_crashes.ipynb                # Análisis exploratorio de accidentes
-├── EDA_closures.ipynb               # Análisis exploratorio de cierres
-├── holidays.ipynb                   # Calendario de festivos + vacaciones escolares
-│
-├── traffic.ipynb                    # Integración de todas las fuentes en el dataset final
-│
-├── modelo_lightgbm.ipynb            # Modelo principal (LightGBM, segmentos monitorizados)
-├── modelo_lightgbm2.ipynb           # Modelo de respaldo (LightGBM, generalizable)
-├── modelo_gcn.ipynb                 # Modelo GCN (PyTorch Geometric)
-│
-├── grafo_y_predicciones.ipynb       # Grafo vial (OSMnx) + 4 escenarios de predicción + comparativa final
-├── VRP_ortools.ipynb                # Resolución del VRP con Google OR-Tools
-├── VRP_genetic.ipynb                # Resolución del VRP con algoritmo genético
+├── descargar_weather.ipynb      # Descarga de clima histórico (Open-Meteo)
+├── EDA_closures.ipynb           # Análisis exploratorio de cierres
+├── EDA_crashes.ipynb            # Análisis exploratorio de accidentes
+├── EDA_general.py               # Funciones generales de EDA
+├── holidays.ipynb               # Calendario de festivos + vacaciones escolares
+├── traffic.ipynb                # Integración de todas las fuentes en el dataset final
+├── modelo_lightgbm.ipynb        # Modelo principal (LightGBM, segmentos monitorizados)
+├── modelo_lightgbm2.ipynb       # Modelo de respaldo (LightGBM, generalizable)
+├── modelo_gcn.ipynb             # Modelo GCN (PyTorch Geometric)
+├── grafo_y_predicciones.ipynb   # Grafo vial (OSMnx) + 4 escenarios de predicción + comparativa final
+├── VRP_ortools.ipynb            # Resolución del VRP con Google OR-Tools
+├── VRP_genetico.ipynb            # Resolución del VRP con algoritmo genético
 │
 └── README.md
 ```
@@ -124,9 +122,9 @@ Los notebooks se ejecutaron en VSCode y Google Colab, guardando los artefactos i
 
 ## Fuentes de datos
 
-- [Chicago Traffic Tracker – Historical Congestion Estimates by Segment](https://data.cityofchicago.org/) — tráfico histórico y en tiempo real
-- [Traffic Crashes – Crashes](https://data.cityofchicago.org/) — accidentes de tráfico
-- [Transportation Department Permits – Street Closures](https://data.cityofchicago.org/) — obras y cortes de vía
+- [Chicago Traffic Tracker – Historical Congestion Estimates by Segment](https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Se/n4j6-wkkf/about_data) — tráfico histórico y en tiempo real
+- [Traffic Crashes – Crashes](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data) — accidentes de tráfico
+- [Transportation Department Permits – Street Closures](https://data.cityofchicago.org/Transportation/Transportation-Department-Permits-Street-Closures/jdis-5sry/about_data) — obras y cortes de vía
 - [setlist.fm](https://www.setlist.fm/) — histórico de conciertos
 - [Ticketmaster Discovery API](https://developer.ticketmaster.com/) — eventos deportivos y musicales en tiempo real
 - [Pro Football Reference / Sports Reference](https://www.sports-reference.com/) — calendarios de partidos
