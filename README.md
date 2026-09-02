@@ -37,7 +37,7 @@ flowchart TD
     E3 --> F
     F --> G1[VRP_ortools.ipynb<br/>resolución con OR-Tools]
     F --> G2[VRP_genetico.ipynb<br/>resolución con algoritmo genético]
-    G1 --> H[Comparativa final<br/>en grafo_y_prediccion.ipynb]
+    G1 --> H[Comparativa final<br/>en grafo_y_predicciones.ipynb]
     G2 --> H
 ```
 
