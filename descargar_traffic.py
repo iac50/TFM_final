@@ -22,8 +22,6 @@ import pyarrow.parquet as pq
 
 # CONFIGURACIÓN
 
-app_token = "7HqB9wkeawANebD2df4wrewny" 
-
 dataset_id = "sxs8-h27x"
 base_url = f"https://data.cityofchicago.org/resource/{dataset_id}.json"
 
@@ -210,13 +208,13 @@ def descargar_mes(session: requests.Session, etiqueta: str, mes_ini_iso: str, me
         tmp_path.rename(part_path)
 
         offset += tam_pag
-        time.sleep(0.3 if app_token else 1.0)
+        time.sleep(0.3 if api_traffic else 1.0)
 
 def main() -> None:
     session = requests.Session()
     headers = {"Accept": "application/json"}
-    if app_token:
-        headers["X-App-Token"] = app_token
+    if api_traffic:
+        headers["X-App-Token"] = api_traffic
     session.headers.update(headers)
 
     dir_output.mkdir(exist_ok=True)
