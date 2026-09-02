@@ -1,6 +1,6 @@
 # Optimización de rutas de reparto en logística urbana
 
-Este proyecto es un Trabajo de Fin de Máster de Ciencia de Datos en la Universidad de Alicante, que se centra en el diseño e implementación de un sistema que combina la **predicción de tráfico** con **optimización de rutas de reparto (VRP)**, aplicado a la ciudad de Chicago.
+Este Trabajo de Fin de Máster de Ciencia de Datos en la Universidad de Alicante se centra en el diseño e implementación de un sistema que combina la **predicción de tráfico** con **optimización de rutas de reparto (VRP)**, aplicado a la ciudad de Chicago.
 
 El sistema integra siete fuentes de datos abiertos (tráfico histórico, accidentes, cierres de calle, partidos, conciertos, calendario festivo y meteorología), entrena y compara tres modelos predictivos de tráfico (LightGBM, un modelo generalizable y una red neuronal de grafos), y resuelve un problema de rutas de vehículos sobre un grafo real de la red viaria, comparando un solver industrial (Google OR-Tools) con un algoritmo genético. Además, el sistema se valida tanto con datos históricos como con datos obtenidos en tiempo real de las fuentes originales.
 
