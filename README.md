@@ -119,6 +119,30 @@ Los notebooks se ejecutaron en VSCode y Google Colab, guardando los artefactos i
 | Optimización de rutas | Google OR-Tools, algoritmo genético |
 | Entorno de ejecución | Google Colab (GPU), Visual Studio Code |
 
+## Cómo reproducir el proyecto
+
+1. **Clonar el repositorio** y subirlo en el entorno de Google Colab, o localmente con Visual Studio Code.
+
+2. **Instalar las dependencias.** Cada notebook instala en su primera celda lo que necesita.
+
+3. **Conseguir los datos de partida.** La carpeta `data/` (calendarios de partidos, accidentes, obras y vacaciones escolares) no está incluida en el repositorio por su tamaño. Se puede generar ejecutando los notebooks de descarga (paso 5, fase 1).
+
+4. **Configurar las claves de API**, necesarias para los notebooks de descarga y para el escenario en tiempo real:
+   - [Chicago Data Portal](https://data.cityofchicago.org/) (App Token)
+   - [setlist.fm API](https://api.setlist.fm/docs/1.0/index.html)
+   - [Ticketmaster Discovery API](https://developer.ticketmaster.com/)
+   - [Open-Meteo](https://open-meteo.com/) (no requiere clave)
+
+5. **Ejecutar los notebooks en el orden del pipeline** (ver [Arquitectura del pipeline](#arquitectura-del-pipeline)):
+
+   | Fase | Notebooks | Qué genera |
+   |---|---|---|
+   | 1. Descarga y EDA | `descargar_traffic.py`, `descargar_traffic2.py`, `descargar_weather.ipynb`, `desc_y_EDA_matches.ipynb`, `desc_y_EDA_concerts.ipynb`, `EDA_crashes.ipynb`, `EDA_closures.ipynb`, `holidays.ipynb` | Datos brutos limpios de cada fuente |
+   | 2. Integración | `traffic.ipynb` | Dataset final unificado |
+   | 3. Modelos predictivos | `modelo_lightgbm.ipynb`, `modelo_lightgbm2.ipynb`, `modelo_gcn.ipynb` | Modelo principal, de respaldo y GCN entrenados |
+   | 4. Grafo y escenarios | `grafo_y_predicciones.ipynb` (hasta el guardado de escenarios) | `escenarios_vrp.pkl` |
+   | 5. Optimización | `VRP_ortools.ipynb`, `VRP_genetico.ipynb` | Resultados de ambos métodos |
+   | 6. Comparativa | `grafo_y_predicciones.ipynb` (apartado final) | Comparativa de los 8 escenarios |
 
 ## Fuentes de datos
 
